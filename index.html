@@ -56,7 +56,7 @@
             padding: 0 20px;
         }
 
-        /* Header & Navigation */
+        /* Header & Navigation (unchanged) */
         header {
             background-color: var(--primary-blue);
             padding: 1rem 0;
@@ -163,7 +163,7 @@
             cursor: pointer;
         }
 
-        /* Hero Section - EXTRA LARGE LOGO */
+        /* Hero Section - EXTRA LARGE LOGO (unchanged) */
         .hero {
             background: linear-gradient(rgba(26, 95, 122, 0.85), rgba(45, 147, 108, 0.8)), url('images/gracepath.jpg');
             background-size: cover;
@@ -204,7 +204,6 @@
             will-change: transform;
         }
 
-        /* Logo Glow Effect */
         .logo-glow {
             position: absolute;
             top: 50%;
@@ -282,7 +281,7 @@
             left: 100%;
         }
 
-        /* About Section - Dedicated to Willem Oberholzer */
+        /* About Section (unchanged) */
         .about {
             padding: 5rem 0;
             background-color: var(--neutral-light);
@@ -378,7 +377,7 @@
             text-align: center;
         }
 
-        /* Father's Advice Section */
+        /* Father's Advice Section (unchanged) */
         .fathers-advice {
             padding: 4rem 0;
             background: linear-gradient(135deg, var(--primary-blue), var(--secondary-green));
@@ -500,7 +499,7 @@
             opacity: 0.9;
         }
 
-        /* Features Section - EXACT from flier */
+        /* Features Section (unchanged) */
         .features {
             padding: 5rem 0;
             background-color: white;
@@ -549,7 +548,7 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Pricing Section - EXACT from flier */
+        /* Pricing Section (unchanged) */
         .pricing {
             padding: 5rem 0;
             background-color: var(--neutral-light);
@@ -588,7 +587,7 @@
             font-size: 1.1rem;
         }
 
-        /* Contact Section - EXACT from flier */
+        /* === NEW CONTACT SECTION (with modal trigger) === */
         .contact {
             padding: 5rem 0;
             background-color: var(--primary-blue);
@@ -617,64 +616,235 @@
             padding: 0 1rem;
         }
 
-        /* Simple Contact Form */
-        .simple-contact {
-            background-color: white;
-            padding: 3rem;
+        /* Modal trigger button - styled like your CTA button */
+        .contact-trigger-btn {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--neutral-dark);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.3rem;
+            margin-top: 1rem;
+            transition: all 0.3s;
+            border: 3px solid var(--accent-gold);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .contact-trigger-btn:hover {
+            background-color: transparent;
+            color: white;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .contact-trigger-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.7s;
+            z-index: -1;
+        }
+
+        .contact-trigger-btn:hover::before {
+            left: 100%;
+        }
+
+        /* === CONTACT MODAL STYLES (adapted from B-Days 4 U) === */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-content {
+            position: relative;
+            background: white;
+            margin: 5% auto;
+            padding: 0;
+            width: 90%;
+            max-width: 700px;
+            max-height: 85vh;
             border-radius: var(--border-radius);
-            max-width: 600px;
-            margin: 3rem auto 0;
-            box-shadow: var(--shadow-hover);
+            border: 3px solid var(--accent-gold);
+            box-shadow: 0 0 25px rgba(255, 183, 77, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-header {
+            padding: 20px;
+            border-bottom: 2px solid var(--accent-gold);
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        .modal-header h2 {
+            color: var(--primary-blue);
+            text-align: center;
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: var(--neutral-dark);
+            font-size: 2.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: color 0.2s;
+            line-height: 1;
+        }
+
+        .close-modal:hover {
+            color: var(--accent-gold);
+        }
+
+        .scrollable-form {
+            overflow-y: auto;
+            padding: 0 20px 20px;
+            max-height: 65vh;
+        }
+
+        /* Inquiry Type Selection */
+        .inquiry-types {
+            display: grid;
+            gap: 12px;
+            margin: 1.5rem 0;
+        }
+
+        .inquiry-item {
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all 0.2s;
+            background: var(--neutral-light);
+        }
+
+        .inquiry-item:hover {
+            border-color: var(--secondary-green);
+            background: rgba(45, 147, 108, 0.05);
+        }
+
+        .inquiry-title {
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .inquiry-title i {
+            color: var(--accent-gold);
+            width: 24px;
+        }
+
+        /* Form Styles */
+        .contact-form {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
-            text-align: left;
+            display: grid;
+            gap: 0.5rem;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
+        label {
+            color: var(--primary-blue);
+            font-size: 1rem;
             font-weight: 600;
-            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
+        .form-input {
+            padding: 12px 15px;
             border: 2px solid #ddd;
             border-radius: 8px;
+            background: white;
             font-family: 'Poppins', sans-serif;
             font-size: 1rem;
-            transition: border-color 0.3s;
+            transition: all 0.3s;
+            width: 100%;
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus {
+        .form-input:focus {
             border-color: var(--accent-light);
+            box-shadow: 0 0 0 3px rgba(87, 195, 182, 0.2);
             outline: none;
         }
 
-        .submit-btn {
-            background-color: var(--secondary-green);
+        .form-input::placeholder {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        .submit-button {
+            background: var(--secondary-green);
             color: white;
+            padding: 15px 30px;
             border: none;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
+            border-radius: 50px;
             cursor: pointer;
-            transition: background-color 0.3s;
-            width: 100%;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
             margin-top: 1rem;
+            border: 2px solid var(--secondary-green);
         }
 
-        .submit-btn:hover {
-            background-color: var(--accent-light);
+        .submit-button:hover {
+            background: transparent;
+            color: var(--secondary-green);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(45, 147, 108, 0.3);
         }
 
-        /* Footer */
+        .submit-button i {
+            font-size: 1.2rem;
+        }
+
+        /* Validation styling */
+        .form-input.valid {
+            border-color: var(--secondary-green);
+            background: rgba(45, 147, 108, 0.05);
+        }
+
+        .form-input.invalid {
+            border-color: #dc3545;
+            background: rgba(220, 53, 69, 0.05);
+        }
+
+        /* Footer (unchanged) */
         footer {
             background-color: var(--neutral-dark);
             color: white;
@@ -732,30 +902,25 @@
             opacity: 0.8;
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 992px) {
             .about-content {
                 flex-direction: column;
                 gap: 3rem;
             }
-            
             .footer-content {
                 flex-direction: column;
                 gap: 2rem;
             }
-            
             .advice-pillars {
                 gap: 1.5rem;
             }
-            
             .pillar {
                 width: 180px;
             }
-            
             .hero-logo {
                 max-width: 700px;
             }
-            
             .hero-logo-img {
                 max-height: 450px;
             }
@@ -774,90 +939,77 @@
                 text-align: center;
                 box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             }
-            
             nav ul.active {
                 display: flex;
             }
-            
             .mobile-menu-btn {
                 display: block;
             }
-            
             .hero-logo {
                 max-width: 550px;
                 margin-bottom: 2.5rem;
             }
-            
             .hero-logo-img {
                 max-height: 350px;
             }
-            
             .flier-headline {
                 font-size: 2rem;
             }
-            
             .flier-subheadline {
                 font-size: 1.5rem;
             }
-            
             .flier-tagline {
                 font-size: 1.3rem;
             }
-            
             .section-title {
                 font-size: 2rem;
             }
-            
             .memorial-box {
                 padding: 2rem;
             }
-            
             .memorial-title {
                 font-size: 1.6rem;
             }
-            
             .advice-quote {
                 font-size: 1.8rem;
             }
-            
             .advice-pillars {
                 flex-direction: column;
                 align-items: center;
             }
-            
             .pillar {
                 width: 100%;
                 max-width: 300px;
             }
-            
             .logo-img {
                 height: 90px;
             }
-            
             .logo-text h1 {
                 font-size: 1.6rem;
             }
-            
             .logo-text .willem {
                 font-size: 1.4rem;
             }
-            
             .logo-text .isinyathelo {
                 font-size: 1.7rem;
             }
-            
             .features-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
-            
             .footer-logo {
                 height: 90px;
             }
-            
             .cta-button {
                 padding: 1rem 2.5rem;
                 font-size: 1.2rem;
+            }
+            .modal-content {
+                margin: 10% auto;
+                width: 95%;
+            }
+            .modal-header h2 {
+                font-size: 1.5rem;
             }
         }
 
@@ -866,131 +1018,79 @@
                 padding: 3rem 0 5rem;
                 min-height: 85vh;
             }
-            
             .hero-logo {
                 max-width: 380px;
                 margin-bottom: 2rem;
             }
-            
             .hero-logo-img {
                 max-height: 280px;
             }
-            
             .flier-headline {
                 font-size: 1.8rem;
             }
-            
             .flier-subheadline {
                 font-size: 1.3rem;
             }
-            
             .flier-tagline {
                 font-size: 1.1rem;
             }
-            
             .advice-quote {
                 font-size: 1.5rem;
                 padding: 0 0.5rem;
             }
-            
             .advice-icon {
                 font-size: 3rem;
             }
-            
             .advice-attribution {
                 font-size: 1.1rem;
             }
-            
             .advice-explanation {
                 font-size: 1rem;
             }
-            
             .feature-card {
                 padding: 1.8rem 1.5rem;
             }
-            
             .feature-title {
                 font-size: 1.5rem;
             }
-            
             .price-highlight {
                 font-size: 3rem;
             }
-            
             .contact-phone {
                 font-size: 1.8rem;
             }
-            
-            .simple-contact {
-                padding: 2rem;
-            }
-            
             .logo-img {
                 height: 75px;
             }
-            
-            .logo-text h1 {
-                font-size: 1.4rem;
-            }
-            
             .footer-logo {
                 height: 75px;
             }
-            
             .cta-button {
+                padding: 0.9rem 2rem;
+                font-size: 1.1rem;
+            }
+            .contact-trigger-btn {
                 padding: 0.9rem 2rem;
                 font-size: 1.1rem;
             }
         }
 
-        /* Enhanced Animations */
+        /* Animations */
         @keyframes gentlePulse {
-            0% { 
-                transform: scale(1); 
-                filter: 
-                    drop-shadow(0 8px 20px rgba(0,0,0,0.4)) 
-                    drop-shadow(0 4px 12px rgba(0,0,0,0.3))
-                    drop-shadow(0 2px 6px rgba(0,0,0,0.2));
-            }
-            50% { 
-                transform: scale(1.03); 
-                filter: 
-                    drop-shadow(0 10px 25px rgba(0,0,0,0.5)) 
-                    drop-shadow(0 6px 15px rgba(0,0,0,0.4))
-                    drop-shadow(0 3px 8px rgba(0,0,0,0.3));
-            }
-            100% { 
-                transform: scale(1); 
-                filter: 
-                    drop-shadow(0 8px 20px rgba(0,0,0,0.4)) 
-                    drop-shadow(0 4px 12px rgba(0,0,0,0.3))
-                    drop-shadow(0 2px 6px rgba(0,0,0,0.2));
-            }
+            0% { transform: scale(1); filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4)) drop-shadow(0 4px 12px rgba(0,0,0,0.3)) drop-shadow(0 2px 6px rgba(0,0,0,0.2)); }
+            50% { transform: scale(1.03); filter: drop-shadow(0 10px 25px rgba(0,0,0,0.5)) drop-shadow(0 6px 15px rgba(0,0,0,0.4)) drop-shadow(0 3px 8px rgba(0,0,0,0.3)); }
+            100% { transform: scale(1); filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4)) drop-shadow(0 4px 12px rgba(0,0,0,0.3)) drop-shadow(0 2px 6px rgba(0,0,0,0.2)); }
         }
 
         @keyframes pulseGlow {
-            0% { 
-                opacity: 0.5;
-                transform: translate(-50%, -50%) scale(0.9);
-            }
-            50% { 
-                opacity: 0.8;
-                transform: translate(-50%, -50%) scale(1.1);
-            }
-            100% { 
-                opacity: 0.5;
-                transform: translate(-50%, -50%) scale(0.9);
-            }
+            0% { opacity: 0.5; transform: translate(-50%, -50%) scale(0.9); }
+            50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+            100% { opacity: 0.5; transform: translate(-50%, -50%) scale(0.9); }
         }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes floatLogo {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
         }
 
         .fade-in {
@@ -1000,6 +1100,11 @@
         .hero-logo-img {
             animation: gentlePulse 3s ease-in-out infinite, floatLogo 4s ease-in-out infinite;
             animation-delay: 0.5s;
+        }
+
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
     </style>
 </head>
@@ -1033,47 +1138,38 @@
         </div>
     </header>
 
-    <!-- Hero Section with EXTRA LARGE LOGO -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-logo fade-in">
                 <div class="logo-glow"></div>
                 <img src="images/logo.png" alt="Willem Isinyathelo House" class="hero-logo-img">
             </div>
-            
-            <!-- EXACT WORDING FROM FLIER -->
             <h1 class="flier-headline fade-in">SAFE, AFFORDABLE STUDENT BOARDING</h1>
             <h2 class="flier-subheadline fade-in">FOR PRIMARY & HIGH SCHOOL STUDENTS</h2>
-            
             <div class="flier-tagline fade-in">
                 A supportive Christian environment for young students to grow and thrive
             </div>
-            
             <a href="#contact" class="cta-button fade-in">Contact Us Today!</a>
         </div>
     </section>
 
-    <!-- About Section - Dedicated to Willem Oberholzer -->
+    <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <h2 class="section-title">In Loving Memory of Willem Oberholzer</h2>
             <div class="about-content">
                 <div class="about-text">
                     <p><strong>Willem Isinyathelo House</strong> stands as a living tribute to <strong>Willem Oberholzer</strong>, Rina's beloved father who passed away 14 years ago. This student boarding home was founded in his memory, embodying the values of care, guidance, and nurturing support that he exemplified throughout his life.</p>
-                    
                     <div class="memorial-box">
                         <h3 class="memorial-title"><i class="fas fa-heart"></i> A Father's Legacy</h3>
                         <p>Willem Oberholzer believed deeply in the power of education and the importance of providing young people with a safe, nurturing environment to grow. As a devoted father who understood the needs of children, he recognized that every child deserves both a solid foundation and compassionate guidance along their path.</p>
                         <p>The name <strong>"Isinyathelo"</strong> – meaning "step" or "footstep" in Zulu – perfectly captures his philosophy: that true education involves walking alongside students, guiding them step by step, just as he guided his own family with love and wisdom.</p>
                     </div>
-                    
                     <p>Our boarding home continues his legacy by providing primary and high school students with the <strong>safe, affordable, and supportive Christian environment</strong> that Willem believed every child deserves. We honor his memory by creating a home where young students can thrive academically, spiritually, and personally.</p>
-                    
                     <p>Every aspect of Willem Isinyathelo House reflects the values Willem Oberholzer lived by: integrity, compassion, faith, and a commitment to helping others reach their full potential. We walk with each student on their educational journey, providing the guidance and support that transforms a house into a home.</p>
                 </div>
-                
                 <div class="about-image">
-                    <!-- Placeholder for memorial image -->
                     <div style="width:100%; height:500px; background:linear-gradient(135deg, var(--primary-blue), var(--secondary-green)); display:flex; align-items:center; justify-content:center; color:white;">
                         <div style="text-align:center; padding:2rem;">
                             <i class="fas fa-hands-helping" style="font-size:4rem; margin-bottom:1rem; color:var(--accent-gold);"></i>
@@ -1096,40 +1192,28 @@
                 <div class="advice-icon">
                     <i class="fas fa-quote-right"></i>
                 </div>
-                
                 <div class="advice-quote fade-in">
                     Remember your identity, remember where you come from, remember who you are.
                 </div>
-                
                 <div class="advice-attribution fade-in">
                     — Willem Oberholzer's advice to his daughter Rina
                 </div>
-                
                 <div class="advice-explanation fade-in">
                     These words were Willem's guiding principles for his daughter, and they now form the foundation of our approach at Willem Isinyathelo House. We believe every student should understand their roots, embrace their identity, and grow into their full potential.
                 </div>
-                
                 <div class="advice-pillars">
                     <div class="pillar fade-in">
-                        <div class="pillar-icon">
-                            <i class="fas fa-fingerprint"></i>
-                        </div>
+                        <div class="pillar-icon"><i class="fas fa-fingerprint"></i></div>
                         <div class="pillar-title">Remember Your Identity</div>
                         <div class="pillar-desc">Helping students understand and embrace who they are</div>
                     </div>
-                    
                     <div class="pillar fade-in">
-                        <div class="pillar-icon">
-                            <i class="fas fa-roots"></i>
-                        </div>
+                        <div class="pillar-icon"><i class="fas fa-roots"></i></div>
                         <div class="pillar-title">Remember Where You Come From</div>
                         <div class="pillar-desc">Honoring heritage, family, and cultural background</div>
                     </div>
-                    
                     <div class="pillar fade-in">
-                        <div class="pillar-icon">
-                            <i class="fas fa-user-check"></i>
-                        </div>
+                        <div class="pillar-icon"><i class="fas fa-user-check"></i></div>
                         <div class="pillar-title">Remember Who You Are</div>
                         <div class="pillar-desc">Developing character, values, and self-awareness</div>
                     </div>
@@ -1138,43 +1222,33 @@
         </div>
     </section>
 
-    <!-- Features Section - EXACT WORDING FROM FLIER -->
+    <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
             <h2 class="section-title">What We Provide</h2>
             <div class="features-grid">
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
+                    <div class="feature-icon"><i class="fas fa-home"></i></div>
                     <h3 class="feature-title">SAFE & COMFORTABLE ACCOMMODATION</h3>
                     <p class="feature-description flier-text">Secure and comfortable living spaces designed to feel like home, with regular safety checks and a secure environment.</p>
                 </div>
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
+                    <div class="feature-icon"><i class="fas fa-user-graduate"></i></div>
                     <h3 class="feature-title">SUPERVISION & ACADEMIC SUPPORT</h3>
                     <p class="feature-description flier-text">Qualified supervisors provide guidance and homework assistance with study sessions and academic monitoring.</p>
                 </div>
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
+                    <div class="feature-icon"><i class="fas fa-utensils"></i></div>
                     <h3 class="feature-title">NUTRITIOUS MEALS EVERYDAY</h3>
                     <p class="feature-description flier-text">Balanced, healthy meals prepared daily to support growth and concentration. Special dietary needs accommodated.</p>
                 </div>
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-bus"></i>
-                    </div>
+                    <div class="feature-icon"><i class="fas fa-bus"></i></div>
                     <h3 class="feature-title">TRANSPORT TO AND FROM SCHOOL</h3>
                     <p class="feature-description flier-text">Reliable and safe transport services provided for daily school commutes, ensuring students arrive punctually and return safely.</p>
                 </div>
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-church"></i>
-                    </div>
+                    <div class="feature-icon"><i class="fas fa-church"></i></div>
                     <h3 class="feature-title">FAITH & VALUES-BASED CARE</h3>
                     <p class="feature-description flier-text">A Christian environment that nurtures spiritual growth, moral values, and character development.</p>
                 </div>
@@ -1182,7 +1256,7 @@
         </div>
     </section>
 
-    <!-- Pricing Section - EXACT WORDING FROM FLIER -->
+    <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Affordable Rates</h2>
@@ -1196,39 +1270,17 @@
         </div>
     </section>
 
-    <!-- Contact Section - EXACT WORDING FROM FLIER -->
+    <!-- === UPDATED CONTACT SECTION (with modal trigger) === -->
     <section class="contact" id="contact">
         <div class="container">
             <h2>Contact Us Today!</h2>
             <div class="contact-phone">062 949 7355</div>
             <p class="contact-note flier-text">Begin your child's journey in our supportive Christian environment where young students grow and thrive.</p>
             
-            <div class="simple-contact fade-in">
-                <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">Send Us a Message</h3>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" required placeholder="Parent/Guardian Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" required placeholder="062 949 7355">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email Address</label>
-                        <input type="email" id="email" required placeholder="your@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="students">Student Information</label>
-                        <input type="text" id="students" placeholder="Number of students, ages, and grades">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="4" placeholder="Tell us about your needs..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Contact Us Today!</button>
-                </form>
-            </div>
+            <!-- Modal trigger button (replaces old inline form) -->
+            <button class="contact-trigger-btn" onclick="showContactModal()">
+                <i class="fas fa-paper-plane"></i> Send Inquiry
+            </button>
         </div>
     </section>
 
@@ -1260,6 +1312,93 @@
         </div>
     </footer>
 
+    <!-- === NEW CONTACT MODAL (adapted from B-Days 4 U) === -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeContactModal()">&times;</span>
+            <div class="modal-header">
+                <h2><i class="fas fa-envelope" style="color: var(--accent-gold); margin-right: 10px;"></i> Send us an Inquiry</h2>
+            </div>
+            
+            <div class="scrollable-form">
+                <!-- Inquiry Type Selection -->
+                <div style="margin-bottom: 10px; color: var(--primary-blue); font-weight: 600;">
+                    <i class="fas fa-tag" style="color: var(--accent-gold);"></i> Select Inquiry Type:
+                </div>
+                <div class="inquiry-types">
+                    <div class="inquiry-item contact-inquiry" data-title="General Inquiry">
+                        <div class="inquiry-title">
+                            <i class="fas fa-question-circle"></i> General Inquiry
+                        </div>
+                    </div>
+                    <div class="inquiry-item contact-inquiry" data-title="Pricing & Availability">
+                        <div class="inquiry-title">
+                            <i class="fas fa-coins"></i> Pricing & Availability
+                        </div>
+                    </div>
+                    <div class="inquiry-item contact-inquiry" data-title="Request a Tour">
+                        <div class="inquiry-title">
+                            <i class="fas fa-walking"></i> Request a Tour
+                        </div>
+                    </div>
+                    <div class="inquiry-item contact-inquiry" data-title="Specific Student Needs">
+                        <div class="inquiry-title">
+                            <i class="fas fa-user-graduate"></i> Specific Student Needs
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inquiry Form -->
+                <form id="inquiryForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="parentName"><i class="fas fa-user"></i> Parent/Guardian Full Name</label>
+                        <input type="text" id="parentName" class="form-input" 
+                               placeholder="e.g. John Smith" required
+                               pattern="[A-Za-z ]{2,50}"
+                               title="Please enter a valid name (2-50 letters)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parentPhone"><i class="fas fa-phone"></i> Contact Number</label>
+                        <input type="tel" id="parentPhone" class="form-input" 
+                               placeholder="062 949 7355" 
+                               pattern="0[0-9]{9}" 
+                               title="10-digit SA number (e.g., 062 949 7355)" 
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parentEmail"><i class="fas fa-envelope"></i> Email Address</label>
+                        <input type="email" id="parentEmail" class="form-input" 
+                               placeholder="parent@example.com" required
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                               title="Please enter a valid email address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentInfo"><i class="fas fa-child"></i> Student Information</label>
+                        <input type="text" id="studentInfo" class="form-input" 
+                               placeholder="e.g. 2 students, Grade 4 & 7">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiryMessage"><i class="fas fa-comment"></i> Message</label>
+                        <textarea id="inquiryMessage" class="form-input" rows="4"
+                                  placeholder="Tell us about your requirements..."></textarea>
+                    </div>
+
+                    <!-- Hidden field to store selected inquiry type -->
+                    <input type="hidden" id="selectedInquiry" value="">
+                    
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-paper-plane"></i> Send Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
     <script>
         // Mobile menu toggle
         document.getElementById('mobileMenuBtn').addEventListener('click', function() {
@@ -1267,60 +1406,19 @@
             nav.classList.toggle('active');
         });
 
-        // Contact Form - Open email client with pre-filled information
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const students = document.getElementById('students').value.trim();
-            const message = document.getElementById('message').value.trim();
-            
-            // Construct email subject
-            const subject = encodeURIComponent("Enquiry from Willem Isinyathelo House Website");
-            
-            // Construct email body
-            let body = "Contact Form Submission\n\n";
-            body += "Name: " + name + "\n";
-            body += "Phone: " + phone + "\n";
-            body += "Email: " + email + "\n";
-            body += "Student Information: " + (students || "Not provided") + "\n";
-            body += "Message: " + (message || "No message") + "\n\n";
-            body += "This enquiry was sent from the Willem Isinyathelo House website contact form.";
-            
-            // Encode body for URL
-            const encodedBody = encodeURIComponent(body);
-            
-            // Create mailto link
-            const mailtoLink = `mailto:info@willemisinyathelohouse.com?subject=${subject}&body=${encodedBody}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Optional: Show a confirmation message
-            alert("Your email client will now open with a pre-filled message. Please check the details and send.");
-            
-            // Optionally reset the form
-            // this.reset(); // Uncomment if you want to clear the form after submission
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a, .cta-button').forEach(anchor => {
+        // Smooth scrolling
+        document.querySelectorAll('nav a, .cta-button, .contact-trigger-btn').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href').startsWith('#')) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
                     e.preventDefault();
-                    const targetId = this.getAttribute('href');
+                    const targetId = href;
                     const targetSection = document.querySelector(targetId);
-                    
                     if (targetSection) {
                         window.scrollTo({
                             top: targetSection.offsetTop - 80,
                             behavior: 'smooth'
                         });
-                        
-                        // Close mobile menu if open
                         if (window.innerWidth <= 768) {
                             document.getElementById('mainNav').classList.remove('active');
                         }
@@ -1329,37 +1427,132 @@
             });
         });
 
-        // Add scroll event to header
+        // Scroll effect for header
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
-            } else {
-                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
-            }
+            header.style.boxShadow = window.scrollY > 100 ? '0 4px 12px rgba(0,0,0,0.15)' : '0 4px 12px rgba(0,0,0,0.08)';
         });
 
-        // Fallback background image in case gracepath.jpg is not found
+        // Fallback background
         window.addEventListener('load', function() {
             const hero = document.querySelector('.hero');
             const bgImage = new Image();
             bgImage.src = 'images/gracepath.jpg';
-            
             bgImage.onerror = function() {
                 hero.style.background = 'linear-gradient(rgba(26, 95, 122, 0.85), rgba(45, 147, 108, 0.8)), url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80")';
                 hero.style.backgroundSize = 'cover';
                 hero.style.backgroundPosition = 'center';
-                hero.style.backgroundRepeat = 'no-repeat';
             };
         });
 
-        // Add parallax effect to logo on scroll
+        // Parallax logo effect
         window.addEventListener('scroll', function() {
             const logo = document.querySelector('.hero-logo-img');
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            if (logo && scrolled < 500) {
-                logo.style.transform = `translateY(${rate}px)`;
+            if (logo && window.scrollY < 500) {
+                logo.style.transform = `translateY(${window.scrollY * -0.5}px)`;
+            }
+        });
+
+        // ============ NEW CONTACT MODAL FUNCTIONALITY ============
+        // Modal functions
+        function showContactModal() {
+            document.getElementById('contactModal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // prevent background scrolling
+        }
+
+        function closeContactModal() {
+            document.getElementById('contactModal').style.display = 'none';
+            document.body.style.overflow = ''; // restore scrolling
+        }
+
+        // Close modal when clicking outside the content
+        window.onclick = function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target === modal) {
+                closeContactModal();
+            }
+        }
+
+        // Inquiry type selection
+        document.querySelectorAll('.contact-inquiry').forEach(item => {
+            item.addEventListener('click', function() {
+                // Remove previous selection styling
+                document.querySelectorAll('.contact-inquiry').forEach(i => {
+                    i.style.border = '2px solid #e0e0e0';
+                    i.style.background = 'var(--neutral-light)';
+                });
+                // Highlight selected item
+                this.style.border = '2px solid var(--secondary-green)';
+                this.style.background = 'rgba(45, 147, 108, 0.1)';
+                // Store selected inquiry in hidden field
+                document.getElementById('selectedInquiry').value = this.dataset.title;
+            });
+        });
+
+        // Live form validation & visual feedback
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('input', function() {
+                this.setCustomValidity('');
+                this.checkValidity();
+                
+                if (this.validity.valid) {
+                    this.classList.add('valid');
+                    this.classList.remove('invalid');
+                } else {
+                    this.classList.add('invalid');
+                    this.classList.remove('valid');
+                }
+            });
+        });
+
+        // Form submission (mailto)
+        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Check if an inquiry type was selected
+            const selectedInquiry = document.getElementById('selectedInquiry').value;
+            if (!selectedInquiry) {
+                alert('Please select an inquiry type');
+                return;
+            }
+
+            // Gather form data
+            const parentName = document.getElementById('parentName').value.trim();
+            const parentPhone = document.getElementById('parentPhone').value.trim();
+            const parentEmail = document.getElementById('parentEmail').value.trim();
+            const studentInfo = document.getElementById('studentInfo').value.trim();
+            const inquiryMessage = document.getElementById('inquiryMessage').value.trim();
+
+            // Build email subject & body
+            const subject = `Website Inquiry: ${selectedInquiry}`;
+            let body = `Inquiry Type: ${selectedInquiry}\n\n`;
+            body += `Parent/Guardian: ${parentName}\n`;
+            body += `Phone: ${parentPhone}\n`;
+            body += `Email: ${parentEmail}\n`;
+            body += `Student Information: ${studentInfo || 'Not provided'}\n\n`;
+            body += `Message:\n${inquiryMessage || 'No message'}\n\n`;
+            body += `-- Sent from Willem Isinyathelo House website`;
+
+            // Open default email client
+            window.location.href = `mailto:info@willemisinyathelohouse.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Close modal and show confirmation
+            closeContactModal();
+            alert('Your email client will open with a pre-filled message. Please check and send.');
+
+            // Reset form and selection (optional)
+            document.getElementById('inquiryForm').reset();
+            document.querySelectorAll('.contact-inquiry').forEach(i => {
+                i.style.border = '2px solid #e0e0e0';
+                i.style.background = 'var(--neutral-light)';
+            });
+            document.getElementById('selectedInquiry').value = '';
+        });
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.getElementById('contactModal').style.display === 'block') {
+                closeContactModal();
             }
         });
     </script>
