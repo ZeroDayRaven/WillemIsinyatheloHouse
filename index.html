@@ -80,7 +80,7 @@
         }
 
         .logo-img {
-            height: 105px; /* Increased by 50% from 70px */
+            height: 105px;
             width: auto;
             object-fit: contain;
         }
@@ -186,7 +186,7 @@
         }
 
         .hero-logo {
-            max-width: 900px; /* Increased to accommodate larger logo */
+            max-width: 900px;
             margin: 0 auto 2.5rem;
             position: relative;
         }
@@ -194,7 +194,7 @@
         .hero-logo-img {
             width: 100%;
             height: auto;
-            max-height: 560px; /* Increased by 100% from 280px */
+            max-height: 560px;
             object-fit: contain;
             filter: 
                 drop-shadow(0 8px 20px rgba(0,0,0,0.4)) 
@@ -690,7 +690,7 @@
         }
 
         .footer-logo {
-            height: 120px; /* Increased proportionally */
+            height: 120px;
         }
 
         .footer-logo img {
@@ -831,7 +831,7 @@
             }
             
             .logo-img {
-                height: 90px; /* Adjusted for mobile */
+                height: 90px;
             }
             
             .logo-text h1 {
@@ -852,7 +852,7 @@
             }
             
             .footer-logo {
-                height: 90px; /* Adjusted for mobile */
+                height: 90px;
             }
             
             .cta-button {
@@ -926,7 +926,7 @@
             }
             
             .logo-img {
-                height: 75px; /* Adjusted for mobile */
+                height: 75px;
             }
             
             .logo-text h1 {
@@ -934,7 +934,7 @@
             }
             
             .footer-logo {
-                height: 75px; /* Adjusted for mobile */
+                height: 75px;
             }
             
             .cta-button {
@@ -1215,8 +1215,8 @@
                         <input type="tel" id="phone" required placeholder="062 949 7355">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" required placeholder="info@willemisinyathelohouse.com">
+                        <label for="email">Your Email Address</label>
+                        <input type="email" id="email" required placeholder="your@email.com">
                     </div>
                     <div class="form-group">
                         <label for="students">Student Information</label>
@@ -1267,11 +1267,43 @@
             nav.classList.toggle('active');
         });
 
-        // Form submission
+        // Contact Form - Open email client with pre-filled information
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for contacting Willem Isinyathelo House! We will contact you within 24 hours to discuss our safe, affordable student boarding.');
-            this.reset();
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const students = document.getElementById('students').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Construct email subject
+            const subject = encodeURIComponent("Enquiry from Willem Isinyathelo House Website");
+            
+            // Construct email body
+            let body = "Contact Form Submission\n\n";
+            body += "Name: " + name + "\n";
+            body += "Phone: " + phone + "\n";
+            body += "Email: " + email + "\n";
+            body += "Student Information: " + (students || "Not provided") + "\n";
+            body += "Message: " + (message || "No message") + "\n\n";
+            body += "This enquiry was sent from the Willem Isinyathelo House website contact form.";
+            
+            // Encode body for URL
+            const encodedBody = encodeURIComponent(body);
+            
+            // Create mailto link
+            const mailtoLink = `mailto:info@willemisinyathelohouse.com?subject=${subject}&body=${encodedBody}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Optional: Show a confirmation message
+            alert("Your email client will now open with a pre-filled message. Please check the details and send.");
+            
+            // Optionally reset the form
+            // this.reset(); // Uncomment if you want to clear the form after submission
         });
 
         // Smooth scrolling for navigation links
