@@ -1,1111 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Willem Isinyathelo House - Safe & Affordable Student Boarding</title>
+    
+    <!-- === PRIMARY SEO META TAGS === -->
+    <title>Willem Isinyathelo House – Safe & Affordable Student Boarding South Africa</title>
+    <meta name="description" content="Willem Isinyathelo House offers safe, affordable student boarding for primary & high school learners. Christian environment, nutritious meals, transport, academic support. Founded in memory of Willem Oberholzer.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.willemisinyathelohouse.com/">
+    
+    <!-- === FAVICON (replace with your own) === -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- === OPEN GRAPH (Facebook, WhatsApp, LinkedIn) === -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Willem Isinyathelo House – Safe & Affordable Student Boarding">
+    <meta property="og:description" content="Christian student boarding for primary & high school. Meals, transport, supervision, academic support. R3,000/month.">
+    <meta property="og:image" content="https://www.willemisinyathelohouse.com/images/willem-isinyathelo-house-og.webp">
+    <meta property="og:url" content="https://www.willemisinyathelohouse.com/">
+    <meta property="og:site_name" content="Willem Isinyathelo House">
+    <meta property="og:locale" content="en_ZA">
+    
+    <!-- === TWITTER CARD === -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Willem Isinyathelo House – Safe & Affordable Student Boarding">
+    <meta name="twitter:description" content="Christian student boarding for primary & high school. Meals, transport, supervision, academic support. R3,000/month.">
+    <meta name="twitter:image" content="https://www.willemisinyathelohouse.com/images/willem-isinyathelo-house-twitter.webp">
+    
+    <!-- === SCHEMA.ORG STRUCTURED DATA (JSON-LD) === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "additionalType": "https://schema.org/StudentHousing",
+      "name": "Willem Isinyathelo House",
+      "description": "Safe, affordable student boarding for primary and high school students in a supportive Christian environment. Includes meals, transport, supervision and academic support.",
+      "image": "https://www.willemisinyathelohouse.com/images/logo.webp",
+      "url": "https://www.willemisinyathelohouse.com/",
+      "telephone": "+27 62 949 7355",
+      "priceRange": "R 3,000 per month",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ZA"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "South Africa"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Willem Oberholzer",
+        "description": "Memorial legacy – beloved father whose values guide the home"
+      },
+      "foundingDate": "2020",
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Nutritious meals",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Transport to school",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Academic supervision",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Christian environment",
+          "value": true
+        }
+      ]
+    }
+    </script>
+
+    <!-- === FONTS === -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@400;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- === MINIFIED CSS (gracepath removed) === -->
     <style>
-        :root {
-            --primary-blue: #1A5F7A;
-            --secondary-green: #2D936C;
-            --accent-gold: #FFB74D;
-            --accent-light: #57C3B6;
-            --neutral-light: #F8F9FA;
-            --neutral-dark: #2C3E50;
-            --text-dark: #333333;
-            --text-light: #ffffff;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.12);
-            --border-radius: 10px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            background-color: #fff;
-        }
-
-        h1, h2, h3, h4, h5 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 1rem;
-        }
-
-        .flier-text {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header & Navigation (unchanged) */
-        header {
-            background-color: var(--primary-blue);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: var(--shadow);
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            text-decoration: none;
-        }
-
-        .logo-img {
-            height: 105px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .logo-text {
-            color: white;
-        }
-
-        .logo-text h1 {
-            font-size: 1.9rem;
-            margin-bottom: 0;
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.1;
-        }
-
-        .logo-text .willem {
-            font-size: 1.7rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        .logo-text .isinyathelo {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--accent-gold);
-            letter-spacing: 0.5px;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-        }
-
-        .logo-text .house {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-top: 3px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 400;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-            padding: 5px 0;
-            position: relative;
-        }
-
-        nav a:hover {
-            color: var(--accent-gold);
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            background-color: var(--accent-gold);
-            bottom: 0;
-            left: 0;
-            transition: width 0.3s;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Hero Section - EXTRA LARGE LOGO (unchanged) */
-        .hero {
-            background: linear-gradient(rgba(26, 95, 122, 0.85), rgba(45, 147, 108, 0.8)), url('images/gracepath.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white;
-            text-align: center;
-            padding: 4rem 0 6rem;
-            position: relative;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .hero .container {
-            width: 100%;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-logo {
-            max-width: 900px;
-            margin: 0 auto 2.5rem;
-            position: relative;
-        }
-
-        .hero-logo-img {
-            width: 100%;
-            height: auto;
-            max-height: 560px;
-            object-fit: contain;
-            filter: 
-                drop-shadow(0 8px 20px rgba(0,0,0,0.4)) 
-                drop-shadow(0 4px 12px rgba(0,0,0,0.3))
-                drop-shadow(0 2px 6px rgba(0,0,0,0.2));
-            transform-style: preserve-3d;
-            will-change: transform;
-        }
-
-        .logo-glow {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(255, 183, 77, 0.15) 0%, transparent 70%);
-            z-index: -1;
-            border-radius: 50%;
-            animation: pulseGlow 4s ease-in-out infinite;
-        }
-
-        .flier-headline {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin: 1.5rem 0;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-            letter-spacing: 1px;
-        }
-
-        .flier-subheadline {
-            font-size: 1.8rem;
-            margin: 1.5rem 0;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-        }
-
-        .flier-tagline {
-            font-size: 1.5rem;
-            max-width: 800px;
-            margin: 2rem auto;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-            padding: 0 1rem;
-            font-style: italic;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent-gold);
-            color: var(--neutral-dark);
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.3rem;
-            margin-top: 2.5rem;
-            transition: all 0.3s;
-            border: 3px solid var(--accent-gold);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .cta-button:hover {
-            background-color: transparent;
-            color: white;
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.7s;
-            z-index: -1;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        /* About Section (unchanged) */
-        .about {
-            padding: 5rem 0;
-            background-color: var(--neutral-light);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--primary-blue);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 4px;
-            background-color: var(--accent-gold);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-text p {
-            font-size: 1.15rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .memorial-box {
-            background-color: white;
-            border-left: 5px solid var(--accent-gold);
-            padding: 2.5rem;
-            margin: 2.5rem 0;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-        }
-
-        .memorial-title {
-            color: var(--primary-blue);
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .memorial-title i {
-            color: var(--accent-gold);
-        }
-
-        .about-image {
-            flex: 1;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            position: relative;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s;
-        }
-
-        .about-image:hover img {
-            transform: scale(1.05);
-        }
-
-        .image-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            color: white;
-            padding: 2rem 1.5rem 1.5rem;
-            text-align: center;
-        }
-
-        /* Father's Advice Section (unchanged) */
-        .fathers-advice {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-green));
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .fathers-advice::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
-            background-size: cover;
-            opacity: 0.1;
-        }
-
-        .advice-container {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .advice-icon {
-            font-size: 4rem;
-            color: var(--accent-gold);
-            margin-bottom: 2rem;
-            animation: gentlePulse 3s ease-in-out infinite;
-        }
-
-        .advice-quote {
-            font-size: 2.2rem;
-            font-weight: 700;
-            font-style: italic;
-            line-height: 1.4;
-            margin-bottom: 1.5rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-            position: relative;
-            padding: 0 1rem;
-        }
-
-        .advice-quote::before,
-        .advice-quote::after {
-            content: '"';
-            font-size: 3rem;
-            color: var(--accent-gold);
-            position: absolute;
-            opacity: 0.7;
-        }
-
-        .advice-quote::before {
-            top: -10px;
-            left: 0;
-        }
-
-        .advice-quote::after {
-            bottom: -20px;
-            right: 0;
-        }
-
-        .advice-attribution {
-            font-size: 1.3rem;
-            margin-top: 2rem;
-            color: rgba(255,255,255,0.9);
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .advice-explanation {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 2rem auto 0;
-            line-height: 1.6;
-            color: rgba(255,255,255,0.9);
-            padding: 0 1rem;
-        }
-
-        .advice-pillars {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .pillar {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: var(--border-radius);
-            padding: 1.5rem;
-            width: 200px;
-            transition: transform 0.3s, background 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .pillar:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .pillar-icon {
-            font-size: 2rem;
-            color: var(--accent-gold);
-            margin-bottom: 1rem;
-        }
-
-        .pillar-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .pillar-desc {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        /* Features Section (unchanged) */
-        .features {
-            padding: 5rem 0;
-            background-color: white;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 2rem;
-        }
-
-        .feature-card {
-            background-color: white;
-            border-radius: var(--border-radius);
-            padding: 2.5rem 2rem;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-top: 5px solid var(--accent-light);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .feature-title {
-            font-size: 1.8rem;
-            color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .feature-description {
-            font-size: 1.1rem;
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        .feature-icon {
-            font-size: 3.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-        }
-
-        /* Pricing Section (unchanged) */
-        .pricing {
-            padding: 5rem 0;
-            background-color: var(--neutral-light);
-            text-align: center;
-        }
-
-        .price-box {
-            background-color: white;
-            border-radius: var(--border-radius);
-            padding: 3.5rem;
-            display: inline-block;
-            box-shadow: var(--shadow);
-            max-width: 600px;
-            margin-top: 2rem;
-            border: 3px solid var(--accent-gold);
-        }
-
-        .price-highlight {
-            font-size: 3.8rem;
-            color: var(--secondary-green);
-            font-weight: 800;
-            margin: 1rem 0;
-            line-height: 1;
-        }
-
-        .price-period {
-            color: var(--text-dark);
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-        }
-
-        .price-note {
-            font-style: italic;
-            margin-top: 2rem;
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        /* === NEW CONTACT SECTION (with modal trigger) === */
-        .contact {
-            padding: 5rem 0;
-            background-color: var(--primary-blue);
-            color: white;
-            text-align: center;
-        }
-
-        .contact h2 {
-            color: white;
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-phone {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--accent-gold);
-            margin: 2rem 0;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .contact-note {
-            font-size: 1.3rem;
-            margin: 2rem auto;
-            max-width: 800px;
-            padding: 0 1rem;
-        }
-
-        /* Modal trigger button - styled like your CTA button */
-        .contact-trigger-btn {
-            display: inline-block;
-            background-color: var(--accent-gold);
-            color: var(--neutral-dark);
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.3rem;
-            margin-top: 1rem;
-            transition: all 0.3s;
-            border: 3px solid var(--accent-gold);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            cursor: pointer;
-        }
-
-        .contact-trigger-btn:hover {
-            background-color: transparent;
-            color: white;
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
-
-        .contact-trigger-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.7s;
-            z-index: -1;
-        }
-
-        .contact-trigger-btn:hover::before {
-            left: 100%;
-        }
-
-        /* === CONTACT MODAL STYLES (adapted from B-Days 4 U) === */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-            animation: fadeIn 0.3s;
-        }
-
-        .modal-content {
-            position: relative;
-            background: white;
-            margin: 5% auto;
-            padding: 0;
-            width: 90%;
-            max-width: 700px;
-            max-height: 85vh;
-            border-radius: var(--border-radius);
-            border: 3px solid var(--accent-gold);
-            box-shadow: 0 0 25px rgba(255, 183, 77, 0.3);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .modal-header {
-            padding: 20px;
-            border-bottom: 2px solid var(--accent-gold);
-            position: sticky;
-            top: 0;
-            background: white;
-            z-index: 1;
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
-        }
-
-        .modal-header h2 {
-            color: var(--primary-blue);
-            text-align: center;
-            margin: 0;
-            font-size: 1.8rem;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            color: var(--neutral-dark);
-            font-size: 2.5rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: color 0.2s;
-            line-height: 1;
-        }
-
-        .close-modal:hover {
-            color: var(--accent-gold);
-        }
-
-        .scrollable-form {
-            overflow-y: auto;
-            padding: 0 20px 20px;
-            max-height: 65vh;
-        }
-
-        /* Inquiry Type Selection */
-        .inquiry-types {
-            display: grid;
-            gap: 12px;
-            margin: 1.5rem 0;
-        }
-
-        .inquiry-item {
-            padding: 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            transition: all 0.2s;
-            background: var(--neutral-light);
-        }
-
-        .inquiry-item:hover {
-            border-color: var(--secondary-green);
-            background: rgba(45, 147, 108, 0.05);
-        }
-
-        .inquiry-title {
-            color: var(--primary-blue);
-            font-size: 1.1rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .inquiry-title i {
-            color: var(--accent-gold);
-            width: 24px;
-        }
-
-        /* Form Styles */
-        .contact-form {
-            display: grid;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .form-group {
-            display: grid;
-            gap: 0.5rem;
-        }
-
-        label {
-            color: var(--primary-blue);
-            font-size: 1rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .form-input {
-            padding: 12px 15px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            background: white;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            transition: all 0.3s;
-            width: 100%;
-        }
-
-        .form-input:focus {
-            border-color: var(--accent-light);
-            box-shadow: 0 0 0 3px rgba(87, 195, 182, 0.2);
-            outline: none;
-        }
-
-        .form-input::placeholder {
-            color: #aaa;
-            font-size: 0.95rem;
-        }
-
-        .submit-button {
-            background: var(--secondary-green);
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 1.2rem;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.8rem;
-            margin-top: 1rem;
-            border: 2px solid var(--secondary-green);
-        }
-
-        .submit-button:hover {
-            background: transparent;
-            color: var(--secondary-green);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(45, 147, 108, 0.3);
-        }
-
-        .submit-button i {
-            font-size: 1.2rem;
-        }
-
-        /* Validation styling */
-        .form-input.valid {
-            border-color: var(--secondary-green);
-            background: rgba(45, 147, 108, 0.05);
-        }
-
-        .form-input.invalid {
-            border-color: #dc3545;
-            background: rgba(220, 53, 69, 0.05);
-        }
-
-        /* Footer (unchanged) */
-        footer {
-            background-color: var(--neutral-dark);
-            color: white;
-            padding: 3rem 0 2rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-
-        .footer-logo {
-            height: 120px;
-        }
-
-        .footer-logo img {
-            height: 100%;
-            width: auto;
-            object-fit: contain;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-        }
-
-        .footer-text h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-text .willem {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .footer-text .isinyathelo {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--accent-gold);
-            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-        }
-
-        .footer-dedication {
-            margin-top: 1rem;
-            font-style: italic;
-            color: var(--accent-gold);
-            font-size: 0.9rem;
-        }
-
-        .copyright {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 2rem;
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .about-content {
-                flex-direction: column;
-                gap: 3rem;
-            }
-            .footer-content {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            .advice-pillars {
-                gap: 1.5rem;
-            }
-            .pillar {
-                width: 180px;
-            }
-            .hero-logo {
-                max-width: 700px;
-            }
-            .hero-logo-img {
-                max-height: 450px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--primary-blue);
-                flex-direction: column;
-                padding: 1rem 0;
-                text-align: center;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            }
-            nav ul.active {
-                display: flex;
-            }
-            .mobile-menu-btn {
-                display: block;
-            }
-            .hero-logo {
-                max-width: 550px;
-                margin-bottom: 2.5rem;
-            }
-            .hero-logo-img {
-                max-height: 350px;
-            }
-            .flier-headline {
-                font-size: 2rem;
-            }
-            .flier-subheadline {
-                font-size: 1.5rem;
-            }
-            .flier-tagline {
-                font-size: 1.3rem;
-            }
-            .section-title {
-                font-size: 2rem;
-            }
-            .memorial-box {
-                padding: 2rem;
-            }
-            .memorial-title {
-                font-size: 1.6rem;
-            }
-            .advice-quote {
-                font-size: 1.8rem;
-            }
-            .advice-pillars {
-                flex-direction: column;
-                align-items: center;
-            }
-            .pillar {
-                width: 100%;
-                max-width: 300px;
-            }
-            .logo-img {
-                height: 90px;
-            }
-            .logo-text h1 {
-                font-size: 1.6rem;
-            }
-            .logo-text .willem {
-                font-size: 1.4rem;
-            }
-            .logo-text .isinyathelo {
-                font-size: 1.7rem;
-            }
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            .footer-logo {
-                height: 90px;
-            }
-            .cta-button {
-                padding: 1rem 2.5rem;
-                font-size: 1.2rem;
-            }
-            .modal-content {
-                margin: 10% auto;
-                width: 95%;
-            }
-            .modal-header h2 {
-                font-size: 1.5rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero {
-                padding: 3rem 0 5rem;
-                min-height: 85vh;
-            }
-            .hero-logo {
-                max-width: 380px;
-                margin-bottom: 2rem;
-            }
-            .hero-logo-img {
-                max-height: 280px;
-            }
-            .flier-headline {
-                font-size: 1.8rem;
-            }
-            .flier-subheadline {
-                font-size: 1.3rem;
-            }
-            .flier-tagline {
-                font-size: 1.1rem;
-            }
-            .advice-quote {
-                font-size: 1.5rem;
-                padding: 0 0.5rem;
-            }
-            .advice-icon {
-                font-size: 3rem;
-            }
-            .advice-attribution {
-                font-size: 1.1rem;
-            }
-            .advice-explanation {
-                font-size: 1rem;
-            }
-            .feature-card {
-                padding: 1.8rem 1.5rem;
-            }
-            .feature-title {
-                font-size: 1.5rem;
-            }
-            .price-highlight {
-                font-size: 3rem;
-            }
-            .contact-phone {
-                font-size: 1.8rem;
-            }
-            .logo-img {
-                height: 75px;
-            }
-            .footer-logo {
-                height: 75px;
-            }
-            .cta-button {
-                padding: 0.9rem 2rem;
-                font-size: 1.1rem;
-            }
-            .contact-trigger-btn {
-                padding: 0.9rem 2rem;
-                font-size: 1.1rem;
-            }
-        }
-
-        /* Animations */
-        @keyframes gentlePulse {
-            0% { transform: scale(1); filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4)) drop-shadow(0 4px 12px rgba(0,0,0,0.3)) drop-shadow(0 2px 6px rgba(0,0,0,0.2)); }
-            50% { transform: scale(1.03); filter: drop-shadow(0 10px 25px rgba(0,0,0,0.5)) drop-shadow(0 6px 15px rgba(0,0,0,0.4)) drop-shadow(0 3px 8px rgba(0,0,0,0.3)); }
-            100% { transform: scale(1); filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4)) drop-shadow(0 4px 12px rgba(0,0,0,0.3)) drop-shadow(0 2px 6px rgba(0,0,0,0.2)); }
-        }
-
-        @keyframes pulseGlow {
-            0% { opacity: 0.5; transform: translate(-50%, -50%) scale(0.9); }
-            50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
-            100% { opacity: 0.5; transform: translate(-50%, -50%) scale(0.9); }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
-        }
-
-        .hero-logo-img {
-            animation: gentlePulse 3s ease-in-out infinite, floatLogo 4s ease-in-out infinite;
-            animation-delay: 0.5s;
-        }
-
-        @keyframes floatLogo {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
+:root{--primary-blue:#1A5F7A;--secondary-green:#2D936C;--accent-gold:#FFB74D;--accent-light:#57C3B6;--neutral-light:#F8F9FA;--neutral-dark:#2C3E50;--text-dark:#333333;--text-light:#ffffff;--shadow:0 4px 12px rgba(0,0,0,0.08);--shadow-hover:0 6px 16px rgba(0,0,0,0.12);--border-radius:10px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);line-height:1.6;background-color:#fff}h1,h2,h3,h4,h5{font-family:'Montserrat',sans-serif;font-weight:700;line-height:1.3;margin-bottom:1rem}.flier-text{font-family:'Poppins',sans-serif;font-size:1.1rem;line-height:1.6}.container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}header{background-color:var(--primary-blue);padding:1rem 0;position:sticky;top:0;z-index:100;box-shadow:var(--shadow)}.header-container{display:flex;justify-content:space-between;align-items:center}.logo{display:flex;align-items:center;gap:15px;text-decoration:none}.logo-img{height:105px;width:auto;object-fit:contain}.logo-text{color:#fff;font-size:1.9rem;line-height:1.1;font-family:'Montserrat',sans-serif;font-weight:700}.logo-text .willem{font-size:1.7rem;font-weight:700;letter-spacing:.5px}.logo-text .isinyathelo{font-size:2rem;font-weight:800;color:var(--accent-gold);letter-spacing:.5px;text-shadow:0 1px 2px rgba(0,0,0,0.2)}.logo-text .house{font-size:1.1rem;opacity:.9;margin-top:3px;font-family:'Poppins',sans-serif;font-weight:400}nav ul{display:flex;list-style:none;gap:2rem}nav a{color:#fff;text-decoration:none;font-weight:500;font-size:1.1rem;transition:color .3s;padding:5px 0;position:relative}nav a:hover{color:var(--accent-gold)}nav a::after{content:'';position:absolute;width:0;height:3px;background-color:var(--accent-gold);bottom:0;left:0;transition:width .3s}nav a:hover::after{width:100%}.mobile-menu-btn{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer}.hero{background:linear-gradient(rgba(26,95,122,0.85),rgba(45,147,108,0.8));background-size:cover;background-position:center;color:#fff;text-align:center;padding:4rem 0 6rem;position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden}.hero .container{width:100%;position:relative;z-index:2}.hero-logo{max-width:900px;margin:0 auto 2.5rem;position:relative}.hero-logo-img{width:100%;height:auto;max-height:560px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(0,0,0,0.4)) drop-shadow(0 4px 12px rgba(0,0,0,0.3)) drop-shadow(0 2px 6px rgba(0,0,0,0.2));transform-style:preserve-3d;will-change:transform}.logo-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;height:100%;background:radial-gradient(circle,rgba(255,183,77,0.15) 0%,transparent 70%);z-index:-1;border-radius:50%;animation:pulseGlow 4s ease-in-out infinite}.flier-headline{font-size:2.5rem;font-weight:800;margin:1.5rem 0;text-shadow:0 2px 4px rgba(0,0,0,0.3);letter-spacing:1px}.flier-subheadline{font-size:1.8rem;margin:1.5rem 0;text-shadow:0 1px 2px rgba(0,0,0,0.3)}.flier-tagline{font-size:1.5rem;max-width:800px;margin:2rem auto;text-shadow:0 1px 2px rgba(0,0,0,0.3);padding:0 1rem;font-style:italic}.cta-button{display:inline-block;background-color:var(--accent-gold);color:var(--neutral-dark);padding:1.2rem 3rem;border-radius:50px;text-decoration:none;font-weight:800;font-size:1.3rem;margin-top:2.5rem;transition:all .3s;border:3px solid var(--accent-gold);box-shadow:0 6px 15px rgba(0,0,0,0.2);position:relative;overflow:hidden;z-index:1}.cta-button:hover{background-color:transparent;color:#fff;transform:translateY(-5px) scale(1.05);box-shadow:0 10px 20px rgba(0,0,0,0.3)}.cta-button::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);transition:left .7s;z-index:-1}.cta-button:hover::before{left:100%}.about{padding:5rem 0;background-color:var(--neutral-light)}.section-title{text-align:center;font-size:2.5rem;margin-bottom:3rem;color:var(--primary-blue);position:relative}.section-title::after{content:'';position:absolute;width:80px;height:4px;background-color:var(--accent-gold);bottom:-10px;left:50%;transform:translateX(-50%);border-radius:2px}.about-content{display:flex;align-items:center;gap:4rem;max-width:1000px;margin:0 auto}.about-text{flex:1}.about-text p{font-size:1.15rem;margin-bottom:1.5rem;line-height:1.7}.memorial-box{background-color:#fff;border-left:5px solid var(--accent-gold);padding:2.5rem;margin:2.5rem 0;border-radius:var(--border-radius);box-shadow:var(--shadow)}.memorial-title{color:var(--primary-blue);font-size:1.8rem;margin-bottom:1rem;display:flex;align-items:center;gap:10px}.memorial-title i{color:var(--accent-gold)}.about-image{flex:1;border-radius:var(--border-radius);overflow:hidden;box-shadow:var(--shadow);position:relative}.about-image img{width:100%;height:auto;display:block;transition:transform .5s}.about-image:hover img{transform:scale(1.05)}.image-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;padding:2rem 1.5rem 1.5rem;text-align:center}.fathers-advice{padding:4rem 0;background:linear-gradient(135deg,var(--primary-blue),var(--secondary-green));color:#fff;text-align:center;position:relative;overflow:hidden}.fathers-advice::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');background-size:cover;opacity:.1}.advice-container{max-width:900px;margin:0 auto;position:relative;z-index:2}.advice-icon{font-size:4rem;color:var(--accent-gold);margin-bottom:2rem;animation:gentlePulse 3s ease-in-out infinite}.advice-quote{font-size:2.2rem;font-weight:700;font-style:italic;line-height:1.4;margin-bottom:1.5rem;text-shadow:0 2px 4px rgba(0,0,0,0.2);position:relative;padding:0 1rem}.advice-quote::before,.advice-quote::after{content:'"';font-size:3rem;color:var(--accent-gold);position:absolute;opacity:.7}.advice-quote::before{top:-10px;left:0}.advice-quote::after{bottom:-20px;right:0}.advice-attribution{font-size:1.3rem;margin-top:2rem;color:rgba(255,255,255,0.9);font-family:'Montserrat',sans-serif}.advice-explanation{font-size:1.2rem;max-width:700px;margin:2rem auto 0;line-height:1.6;color:rgba(255,255,255,0.9);padding:0 1rem}.advice-pillars{display:flex;justify-content:center;gap:2rem;margin-top:3rem;flex-wrap:wrap}.pillar{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border-radius:var(--border-radius);padding:1.5rem;width:200px;transition:transform .3s,background .3s;border:1px solid rgba(255,255,255,0.2)}.pillar:hover{transform:translateY(-5px);background:rgba(255,255,255,0.15)}.pillar-icon{font-size:2rem;color:var(--accent-gold);margin-bottom:1rem}.pillar-title{font-size:1.2rem;font-weight:600;margin-bottom:.5rem}.pillar-desc{font-size:.9rem;opacity:.9}.features{padding:5rem 0;background-color:#fff}.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem;margin-top:2rem}.feature-card{background-color:#fff;border-radius:var(--border-radius);padding:2.5rem 2rem;text-align:center;box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s;border-top:5px solid var(--accent-light)}.feature-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-hover)}.feature-title{font-size:1.8rem;color:var(--primary-blue);margin-bottom:1.5rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px}.feature-description{font-size:1.1rem;color:var(--text-dark);line-height:1.6}.feature-icon{font-size:3.5rem;color:var(--primary-blue);margin-bottom:1.5rem}.pricing{padding:5rem 0;background-color:var(--neutral-light);text-align:center}.price-box{background-color:#fff;border-radius:var(--border-radius);padding:3.5rem;display:inline-block;box-shadow:var(--shadow);max-width:600px;margin-top:2rem;border:3px solid var(--accent-gold)}.price-highlight{font-size:3.8rem;color:var(--secondary-green);font-weight:800;margin:1rem 0;line-height:1}.price-period{color:var(--text-dark);font-size:1.3rem;margin-bottom:2rem}.price-note{font-style:italic;margin-top:2rem;color:#666;font-size:1.1rem}.contact{padding:5rem 0;background-color:var(--primary-blue);color:#fff;text-align:center}.contact h2{color:#fff;font-size:2.8rem;margin-bottom:1rem}.contact-phone{font-size:2.5rem;font-weight:800;color:var(--accent-gold);margin:2rem 0;text-shadow:0 2px 4px rgba(0,0,0,0.3)}.contact-note{font-size:1.3rem;margin:2rem auto;max-width:800px;padding:0 1rem}.contact-trigger-btn{display:inline-block;background-color:var(--accent-gold);color:var(--neutral-dark);padding:1.2rem 3rem;border-radius:50px;text-decoration:none;font-weight:800;font-size:1.3rem;margin-top:1rem;transition:all .3s;border:3px solid var(--accent-gold);box-shadow:0 6px 15px rgba(0,0,0,0.2);position:relative;overflow:hidden;z-index:1;cursor:pointer}.contact-trigger-btn:hover{background-color:transparent;color:#fff;transform:translateY(-5px) scale(1.05);box-shadow:0 10px 20px rgba(0,0,0,0.3)}.contact-trigger-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);transition:left .7s;z-index:-1}.contact-trigger-btn:hover::before{left:100%}.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:1000;animation:fadeIn .3s}.modal-content{position:relative;background:#fff;margin:5% auto;padding:0;width:90%;max-width:700px;max-height:85vh;border-radius:var(--border-radius);border:3px solid var(--accent-gold);box-shadow:0 0 25px rgba(255,183,77,0.3);display:flex;flex-direction:column}.modal-header{padding:20px;border-bottom:2px solid var(--accent-gold);position:sticky;top:0;background:#fff;z-index:1;border-radius:var(--border-radius) var(--border-radius) 0 0}.modal-header h2{color:var(--primary-blue);text-align:center;margin:0;font-size:1.8rem}.close-modal{position:absolute;top:15px;right:20px;color:var(--neutral-dark);font-size:2.5rem;font-weight:700;cursor:pointer;transition:color .2s;line-height:1}.close-modal:hover{color:var(--accent-gold)}.scrollable-form{overflow-y:auto;padding:0 20px 20px;max-height:65vh}.inquiry-types{display:grid;gap:12px;margin:1.5rem 0}.inquiry-item{padding:15px;border:2px solid #e0e0e0;border-radius:var(--border-radius);cursor:pointer;transition:all .2s;background:var(--neutral-light)}.inquiry-item:hover{border-color:var(--secondary-green);background:rgba(45,147,108,0.05)}.inquiry-title{color:var(--primary-blue);font-size:1.1rem;font-weight:600;display:flex;align-items:center;gap:10px}.inquiry-title i{color:var(--accent-gold);width:24px}.contact-form{display:grid;gap:1.5rem;margin-top:1.5rem}.form-group{display:grid;gap:.5rem}label{color:var(--primary-blue);font-size:1rem;font-weight:600;display:flex;align-items:center;gap:.5rem}.form-input{padding:12px 15px;border:2px solid #ddd;border-radius:8px;background:#fff;font-family:'Poppins',sans-serif;font-size:1rem;transition:all .3s;width:100%}.form-input:focus{border-color:var(--accent-light);box-shadow:0 0 0 3px rgba(87,195,182,0.2);outline:none}.form-input::placeholder{color:#aaa;font-size:.95rem}.submit-button{background:var(--secondary-green);color:#fff;padding:15px 30px;border:none;border-radius:50px;cursor:pointer;font-weight:700;font-size:1.2rem;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:.8rem;margin-top:1rem;border:2px solid var(--secondary-green)}.submit-button:hover{background:transparent;color:var(--secondary-green);transform:translateY(-2px);box-shadow:0 6px 12px rgba(45,147,108,0.3)}.submit-button i{font-size:1.2rem}.form-input.valid{border-color:var(--secondary-green);background:rgba(45,147,108,0.05)}.form-input.invalid{border-color:#dc3545;background:rgba(220,53,69,0.05)}footer{background-color:var(--neutral-dark);color:#fff;padding:3rem 0 2rem;text-align:center}.footer-content{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem}.footer-logo{height:120px}.footer-logo img{height:100%;width:auto;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.2))}.footer-text h3{font-family:'Montserrat',sans-serif;font-size:1.9rem;margin-bottom:.5rem}.footer-text .willem{font-size:1.5rem;font-weight:700}.footer-text .isinyathelo{font-size:2rem;font-weight:800;color:var(--accent-gold);text-shadow:0 1px 2px rgba(0,0,0,0.2)}.footer-dedication{margin-top:1rem;font-style:italic;color:var(--accent-gold);font-size:.9rem}.copyright{border-top:1px solid rgba(255,255,255,0.1);padding-top:2rem;font-size:.9rem;opacity:.8}@media (max-width:992px){.about-content{flex-direction:column;gap:3rem}.footer-content{flex-direction:column;gap:2rem}.advice-pillars{gap:1.5rem}.pillar{width:180px}.hero-logo{max-width:700px}.hero-logo-img{max-height:450px}}@media (max-width:768px){nav ul{display:none;position:absolute;top:100%;left:0;width:100%;background-color:var(--primary-blue);flex-direction:column;padding:1rem 0;text-align:center;box-shadow:0 4px 8px rgba(0,0,0,0.1)}nav ul.active{display:flex}.mobile-menu-btn{display:block}.hero-logo{max-width:550px;margin-bottom:2.5rem}.hero-logo-img{max-height:350px}.flier-headline{font-size:2rem}.flier-subheadline{font-size:1.5rem}.flier-tagline{font-size:1.3rem}.section-title{font-size:2rem}.memorial-box{padding:2rem}.memorial-title{font-size:1.6rem}.advice-quote{font-size:1.8rem}.advice-pillars{flex-direction:column;align-items:center}.pillar{width:100%;max-width:300px}.logo-img{height:90px}.logo-text h1{font-size:1.6rem}.logo-text .willem{font-size:1.4rem}.logo-text .isinyathelo{font-size:1.7rem}.features-grid{grid-template-columns:1fr;gap:1.5rem}.footer-logo{height:90px}.cta-button{padding:1rem 2.5rem;font-size:1.2rem}.modal-content{margin:10% auto;width:95%}.modal-header h2{font-size:1.5rem}}@media (max-width:576px){.hero{padding:3rem 0 5rem;min-height:85vh}.hero-logo{max-width:380px;margin-bottom:2rem}.hero-logo-img{max-height:280px}.flier-headline{font-size:1.8rem}.flier-subheadline{font-size:1.3rem}.flier-tagline{font-size:1.1rem}.advice-quote{font-size:1.5rem;padding:0 .5rem}.advice-icon{font-size:3rem}.advice-attribution{font-size:1.1rem}.advice-explanation{font-size:1rem}.feature-card{padding:1.8rem 1.5rem}.feature-title{font-size:1.5rem}.price-highlight{font-size:3rem}.contact-phone{font-size:1.8rem}.logo-img{height:75px}.footer-logo{height:75px}.cta-button{padding:.9rem 2rem;font-size:1.1rem}.contact-trigger-btn{padding:.9rem 2rem;font-size:1.1rem}}@keyframes gentlePulse{0%{transform:scale(1);filter:drop-shadow(0 8px 20px rgba(0,0,0,0.4)) drop-shadow(0 4px 12px rgba(0,0,0,0.3)) drop-shadow(0 2px 6px rgba(0,0,0,0.2))}50%{transform:scale(1.03);filter:drop-shadow(0 10px 25px rgba(0,0,0,0.5)) drop-shadow(0 6px 15px rgba(0,0,0,0.4)) drop-shadow(0 3px 8px rgba(0,0,0,0.3))}100%{transform:scale(1);filter:drop-shadow(0 8px 20px rgba(0,0,0,0.4)) drop-shadow(0 4px 12px rgba(0,0,0,0.3)) drop-shadow(0 2px 6px rgba(0,0,0,0.2))}}@keyframes pulseGlow{0%{opacity:.5;transform:translate(-50%,-50%) scale(.9)}50%{opacity:.8;transform:translate(-50%,-50%) scale(1.1)}100%{opacity:.5;transform:translate(-50%,-50%) scale(.9)}}@keyframes fadeIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}.fade-in{animation:fadeIn .8s ease-out forwards}.hero-logo-img{animation:gentlePulse 3s ease-in-out infinite,floatLogo 4s ease-in-out infinite;animation-delay:.5s}@keyframes floatLogo{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
     </style>
 </head>
 <body>
@@ -1113,13 +96,14 @@
     <header>
         <div class="container header-container">
             <a href="#home" class="logo">
-                <img src="images/logo.png" alt="Willem Isinyathelo House Logo" class="logo-img">
+                <picture>
+                    <source srcset="images/logo.webp" type="image/webp">
+                    <img src="images/logo.png" alt="Willem Isinyathelo House Logo" class="logo-img">
+                </picture>
                 <div class="logo-text">
-                    <h1>
-                        <div class="willem">WILLEM</div>
-                        <div class="isinyathelo">ISINYATHELO</div>
-                        <div class="house">HOUSE</div>
-                    </h1>
+                    <div class="willem">WILLEM</div>
+                    <div class="isinyathelo">ISINYATHELO</div>
+                    <div class="house">HOUSE</div>
                 </div>
             </a>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -1138,12 +122,15 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section – H1 here, pure gradient background -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-logo fade-in">
                 <div class="logo-glow"></div>
-                <img src="images/logo.png" alt="Willem Isinyathelo House" class="hero-logo-img">
+                <picture>
+                    <source srcset="images/logo.webp" type="image/webp">
+                    <img src="images/logo.png" alt="Willem Isinyathelo House" class="hero-logo-img">
+                </picture>
             </div>
             <h1 class="flier-headline fade-in">SAFE, AFFORDABLE STUDENT BOARDING</h1>
             <h2 class="flier-subheadline fade-in">FOR PRIMARY & HIGH SCHOOL STUDENTS</h2>
@@ -1270,14 +257,14 @@
         </div>
     </section>
 
-    <!-- === UPDATED CONTACT SECTION (with modal trigger) === -->
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <h2>Contact Us Today!</h2>
-            <div class="contact-phone">062 949 7355</div>
+            <div class="contact-phone">
+                <a href="tel:+27629497355" style="color: inherit; text-decoration: none;">062 949 7355</a>
+            </div>
             <p class="contact-note flier-text">Begin your child's journey in our supportive Christian environment where young students grow and thrive.</p>
-            
-            <!-- Modal trigger button (replaces old inline form) -->
             <button class="contact-trigger-btn" onclick="showContactModal()">
                 <i class="fas fa-paper-plane"></i> Send Inquiry
             </button>
@@ -1289,39 +276,40 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/logo.png" alt="Willem Isinyathelo House Logo">
+                    <picture>
+                        <source srcset="images/logo.webp" type="image/webp">
+                        <img src="images/logo.png" alt="Willem Isinyathelo House Logo">
+                    </picture>
                 </div>
                 <div class="footer-text">
                     <h3>
-                        <div class="willem">WILLEM</div>
-                        <div class="isinyathelo">ISINYATHELO</div>
-                        <div>HOUSE</div>
+                        <span class="willem">WILLEM</span>
+                        <span class="isinyathelo">ISINYATHELO</span>
+                        <span>HOUSE</span>
                     </h3>
                     <p class="flier-text">Safe, Affordable Student Boarding for Primary & High School Students</p>
                     <p class="footer-dedication">In loving memory of Willem Oberholzer</p>
                 </div>
                 <div>
                     <h4>Contact Information</h4>
-                    <p>Cell: 062 949 7355</p>
-                    <p>Email: info@willemisinyathelohouse.com</p>
+                    <p>Cell: <a href="tel:+27629497355" style="color: white; text-decoration: none;">062 949 7355</a></p>
+                    <p>Email: <a href="mailto:info@willemisinyathelohouse.com" style="color: white; text-decoration: none;">info@willemisinyathelohouse.com</a></p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Willem Isinyathelo House. All rights reserved. | A supportive Christian environment for young students to grow and thrive. Founded in memory of Willem Oberholzer.</p>
+                <p>&copy; 2025 Willem Isinyathelo House. All rights reserved. | A supportive Christian environment for young students to grow and thrive. Founded in memory of Willem Oberholzer.</p>
             </div>
         </div>
     </footer>
 
-    <!-- === NEW CONTACT MODAL (adapted from B-Days 4 U) === -->
+    <!-- Contact Modal -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeContactModal()">&times;</span>
             <div class="modal-header">
                 <h2><i class="fas fa-envelope" style="color: var(--accent-gold); margin-right: 10px;"></i> Send us an Inquiry</h2>
             </div>
-            
             <div class="scrollable-form">
-                <!-- Inquiry Type Selection -->
                 <div style="margin-bottom: 10px; color: var(--primary-blue); font-weight: 600;">
                     <i class="fas fa-tag" style="color: var(--accent-gold);"></i> Select Inquiry Type:
                 </div>
@@ -1347,49 +335,28 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Inquiry Form -->
                 <form id="inquiryForm" class="contact-form">
                     <div class="form-group">
                         <label for="parentName"><i class="fas fa-user"></i> Parent/Guardian Full Name</label>
-                        <input type="text" id="parentName" class="form-input" 
-                               placeholder="e.g. John Smith" required
-                               pattern="[A-Za-z ]{2,50}"
-                               title="Please enter a valid name (2-50 letters)">
+                        <input type="text" id="parentName" class="form-input" placeholder="e.g. John Smith" required pattern="[A-Za-z ]{2,50}" title="Please enter a valid name (2-50 letters)">
                     </div>
-
                     <div class="form-group">
                         <label for="parentPhone"><i class="fas fa-phone"></i> Contact Number</label>
-                        <input type="tel" id="parentPhone" class="form-input" 
-                               placeholder="062 949 7355" 
-                               pattern="0[0-9]{9}" 
-                               title="10-digit SA number (e.g., 062 949 7355)" 
-                               required>
+                        <input type="tel" id="parentPhone" class="form-input" placeholder="062 949 7355" pattern="0[0-9]{9}" title="10-digit SA number (e.g., 062 949 7355)" required>
                     </div>
-
                     <div class="form-group">
                         <label for="parentEmail"><i class="fas fa-envelope"></i> Email Address</label>
-                        <input type="email" id="parentEmail" class="form-input" 
-                               placeholder="parent@example.com" required
-                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                               title="Please enter a valid email address">
+                        <input type="email" id="parentEmail" class="form-input" placeholder="parent@example.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
                     </div>
-
                     <div class="form-group">
                         <label for="studentInfo"><i class="fas fa-child"></i> Student Information</label>
-                        <input type="text" id="studentInfo" class="form-input" 
-                               placeholder="e.g. 2 students, Grade 4 & 7">
+                        <input type="text" id="studentInfo" class="form-input" placeholder="e.g. 2 students, Grade 4 & 7">
                     </div>
-
                     <div class="form-group">
                         <label for="inquiryMessage"><i class="fas fa-comment"></i> Message</label>
-                        <textarea id="inquiryMessage" class="form-input" rows="4"
-                                  placeholder="Tell us about your requirements..."></textarea>
+                        <textarea id="inquiryMessage" class="form-input" rows="4" placeholder="Tell us about your requirements..."></textarea>
                     </div>
-
-                    <!-- Hidden field to store selected inquiry type -->
                     <input type="hidden" id="selectedInquiry" value="">
-                    
                     <button type="submit" class="submit-button">
                         <i class="fas fa-paper-plane"></i> Send Inquiry
                     </button>
@@ -1398,163 +365,9 @@
         </div>
     </div>
 
-    <!-- JavaScript -->
+    <!-- MINIFIED JAVASCRIPT -->
     <script>
-        // Mobile menu toggle
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            const nav = document.getElementById('mainNav');
-            nav.classList.toggle('active');
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('nav a, .cta-button, .contact-trigger-btn').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href && href.startsWith('#')) {
-                    e.preventDefault();
-                    const targetId = href;
-                    const targetSection = document.querySelector(targetId);
-                    if (targetSection) {
-                        window.scrollTo({
-                            top: targetSection.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                        if (window.innerWidth <= 768) {
-                            document.getElementById('mainNav').classList.remove('active');
-                        }
-                    }
-                }
-            });
-        });
-
-        // Scroll effect for header
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            header.style.boxShadow = window.scrollY > 100 ? '0 4px 12px rgba(0,0,0,0.15)' : '0 4px 12px rgba(0,0,0,0.08)';
-        });
-
-        // Fallback background
-        window.addEventListener('load', function() {
-            const hero = document.querySelector('.hero');
-            const bgImage = new Image();
-            bgImage.src = 'images/gracepath.jpg';
-            bgImage.onerror = function() {
-                hero.style.background = 'linear-gradient(rgba(26, 95, 122, 0.85), rgba(45, 147, 108, 0.8)), url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80")';
-                hero.style.backgroundSize = 'cover';
-                hero.style.backgroundPosition = 'center';
-            };
-        });
-
-        // Parallax logo effect
-        window.addEventListener('scroll', function() {
-            const logo = document.querySelector('.hero-logo-img');
-            if (logo && window.scrollY < 500) {
-                logo.style.transform = `translateY(${window.scrollY * -0.5}px)`;
-            }
-        });
-
-        // ============ NEW CONTACT MODAL FUNCTIONALITY ============
-        // Modal functions
-        function showContactModal() {
-            document.getElementById('contactModal').style.display = 'block';
-            document.body.style.overflow = 'hidden'; // prevent background scrolling
-        }
-
-        function closeContactModal() {
-            document.getElementById('contactModal').style.display = 'none';
-            document.body.style.overflow = ''; // restore scrolling
-        }
-
-        // Close modal when clicking outside the content
-        window.onclick = function(event) {
-            const modal = document.getElementById('contactModal');
-            if (event.target === modal) {
-                closeContactModal();
-            }
-        }
-
-        // Inquiry type selection
-        document.querySelectorAll('.contact-inquiry').forEach(item => {
-            item.addEventListener('click', function() {
-                // Remove previous selection styling
-                document.querySelectorAll('.contact-inquiry').forEach(i => {
-                    i.style.border = '2px solid #e0e0e0';
-                    i.style.background = 'var(--neutral-light)';
-                });
-                // Highlight selected item
-                this.style.border = '2px solid var(--secondary-green)';
-                this.style.background = 'rgba(45, 147, 108, 0.1)';
-                // Store selected inquiry in hidden field
-                document.getElementById('selectedInquiry').value = this.dataset.title;
-            });
-        });
-
-        // Live form validation & visual feedback
-        document.querySelectorAll('.form-input').forEach(input => {
-            input.addEventListener('input', function() {
-                this.setCustomValidity('');
-                this.checkValidity();
-                
-                if (this.validity.valid) {
-                    this.classList.add('valid');
-                    this.classList.remove('invalid');
-                } else {
-                    this.classList.add('invalid');
-                    this.classList.remove('valid');
-                }
-            });
-        });
-
-        // Form submission (mailto)
-        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Check if an inquiry type was selected
-            const selectedInquiry = document.getElementById('selectedInquiry').value;
-            if (!selectedInquiry) {
-                alert('Please select an inquiry type');
-                return;
-            }
-
-            // Gather form data
-            const parentName = document.getElementById('parentName').value.trim();
-            const parentPhone = document.getElementById('parentPhone').value.trim();
-            const parentEmail = document.getElementById('parentEmail').value.trim();
-            const studentInfo = document.getElementById('studentInfo').value.trim();
-            const inquiryMessage = document.getElementById('inquiryMessage').value.trim();
-
-            // Build email subject & body
-            const subject = `Website Inquiry: ${selectedInquiry}`;
-            let body = `Inquiry Type: ${selectedInquiry}\n\n`;
-            body += `Parent/Guardian: ${parentName}\n`;
-            body += `Phone: ${parentPhone}\n`;
-            body += `Email: ${parentEmail}\n`;
-            body += `Student Information: ${studentInfo || 'Not provided'}\n\n`;
-            body += `Message:\n${inquiryMessage || 'No message'}\n\n`;
-            body += `-- Sent from Willem Isinyathelo House website`;
-
-            // Open default email client
-            window.location.href = `mailto:info@willemisinyathelohouse.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            
-            // Close modal and show confirmation
-            closeContactModal();
-            alert('Your email client will open with a pre-filled message. Please check and send.');
-
-            // Reset form and selection (optional)
-            document.getElementById('inquiryForm').reset();
-            document.querySelectorAll('.contact-inquiry').forEach(i => {
-                i.style.border = '2px solid #e0e0e0';
-                i.style.background = 'var(--neutral-light)';
-            });
-            document.getElementById('selectedInquiry').value = '';
-        });
-
-        // Close modal with ESC key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && document.getElementById('contactModal').style.display === 'block') {
-                closeContactModal();
-            }
-        });
+document.getElementById('mobileMenuBtn').addEventListener('click',function(){document.getElementById('mainNav').classList.toggle('active')});document.querySelectorAll('nav a, .cta-button, .contact-trigger-btn').forEach(anchor=>{anchor.addEventListener('click',function(e){const href=this.getAttribute('href');if(href&&href.startsWith('#')){e.preventDefault();const targetId=href;const targetSection=document.querySelector(targetId);if(targetSection){window.scrollTo({top:targetSection.offsetTop-80,behavior:'smooth'});if(window.innerWidth<=768){document.getElementById('mainNav').classList.remove('active')}}}})});window.addEventListener('scroll',function(){const header=document.querySelector('header');header.style.boxShadow=window.scrollY>100?'0 4px 12px rgba(0,0,0,0.15)':'0 4px 12px rgba(0,0,0,0.08)'});window.addEventListener('scroll',function(){const logo=document.querySelector('.hero-logo-img');if(logo&&window.scrollY<500){logo.style.transform=`translateY(${window.scrollY*-0.5}px)`}});function showContactModal(){document.getElementById('contactModal').style.display='block';document.body.style.overflow='hidden'}function closeContactModal(){document.getElementById('contactModal').style.display='none';document.body.style.overflow=''}window.onclick=function(event){const modal=document.getElementById('contactModal');if(event.target===modal){closeContactModal()}};document.querySelectorAll('.contact-inquiry').forEach(item=>{item.addEventListener('click',function(){document.querySelectorAll('.contact-inquiry').forEach(i=>{i.style.border='2px solid #e0e0e0';i.style.background='var(--neutral-light)'});this.style.border='2px solid var(--secondary-green)';this.style.background='rgba(45, 147, 108, 0.1)';document.getElementById('selectedInquiry').value=this.dataset.title})});document.querySelectorAll('.form-input').forEach(input=>{input.addEventListener('input',function(){this.setCustomValidity('');this.checkValidity();if(this.validity.valid){this.classList.add('valid');this.classList.remove('invalid')}else{this.classList.add('invalid');this.classList.remove('valid')}})});document.getElementById('inquiryForm').addEventListener('submit',function(e){e.preventDefault();const selectedInquiry=document.getElementById('selectedInquiry').value;if(!selectedInquiry){alert('Please select an inquiry type');return}const parentName=document.getElementById('parentName').value.trim();const parentPhone=document.getElementById('parentPhone').value.trim();const parentEmail=document.getElementById('parentEmail').value.trim();const studentInfo=document.getElementById('studentInfo').value.trim();const inquiryMessage=document.getElementById('inquiryMessage').value.trim();const subject=`Website Inquiry: ${selectedInquiry}`;let body=`Inquiry Type: ${selectedInquiry}\n\n`;body+=`Parent/Guardian: ${parentName}\n`;body+=`Phone: ${parentPhone}\n`;body+=`Email: ${parentEmail}\n`;body+=`Student Information: ${studentInfo||'Not provided'}\n\n`;body+=`Message:\n${inquiryMessage||'No message'}\n\n`;body+=`-- Sent from Willem Isinyathelo House website`;window.location.href=`mailto:info@willemisinyathelohouse.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;closeContactModal();alert('Your email client will open with a pre-filled message. Please check and send.');document.getElementById('inquiryForm').reset();document.querySelectorAll('.contact-inquiry').forEach(i=>{i.style.border='2px solid #e0e0e0';i.style.background='var(--neutral-light)'});document.getElementById('selectedInquiry').value=''});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.getElementById('contactModal').style.display==='block'){closeContactModal()}});
     </script>
 </body>
 </html>
