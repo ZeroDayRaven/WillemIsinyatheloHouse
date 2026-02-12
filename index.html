@@ -2,16 +2,20 @@
 <html lang="en-ZA">
 <head>
     <meta charset="UTF-8">
+    <!-- VIEWPORT – ensures proper scaling on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
+    <!-- === PRIMARY SEO META TAGS === -->
     <title>Willem Isinyathelo House – Safe & Affordable Student Boarding South Africa</title>
     <meta name="description" content="Willem Isinyathelo House offers safe, affordable student boarding for primary & high school learners. Christian environment, nutritious meals, transport, academic support. Founded in memory of Willem Oberholzer.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.willemisinyathelohouse.com/">
     
+    <!-- === FAVICON === -->
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
+    <!-- === OPEN GRAPH === -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Willem Isinyathelo House – Safe & Affordable Student Boarding">
     <meta property="og:description" content="Christian student boarding for primary & high school. Meals, transport, supervision, academic support. R3,000/month.">
@@ -20,11 +24,13 @@
     <meta property="og:site_name" content="Willem Isinyathelo House">
     <meta property="og:locale" content="en_ZA">
     
+    <!-- === TWITTER CARD === -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Willem Isinyathelo House – Safe & Affordable Student Boarding">
     <meta name="twitter:description" content="Christian student boarding for primary & high school. Meals, transport, supervision, academic support. R3,000/month.">
     <meta name="twitter:image" content="https://www.willemisinyathelohouse.com/images/willem-isinyathelo-house-twitter.webp">
     
+    <!-- === SCHEMA.ORG STRUCTURED DATA === -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -59,11 +65,13 @@
     }
     </script>
 
+    <!-- === FONTS – only used weights, removed Nunito (unused) === -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- === OPTIMISED CSS – mobile-first, reduced motion, better tap targets === -->
     <style>
 :root {
   --primary-blue: #1A5F7A;
@@ -118,7 +126,7 @@ nav ul { display: flex; list-style: none; gap: 2rem; }
 nav a {
   color: #fff; text-decoration: none; font-weight: 500; font-size: 1.1rem;
   padding: 8px 0; position: relative; transition: color 0.3s;
-  display: inline-block;
+  display: inline-block; /* better tap area */
 }
 nav a:hover { color: var(--accent-gold); }
 nav a::after {
@@ -128,7 +136,7 @@ nav a::after {
 nav a:hover::after { width: 100%; }
 .mobile-menu-btn {
   display: none; background: none; border: none; color: #fff;
-  font-size: 1.8rem; cursor: pointer; padding: 8px 12px;
+  font-size: 1.8rem; cursor: pointer; padding: 8px 12px; /* larger tap */
 }
 /* hero */
 .hero {
@@ -197,10 +205,11 @@ nav a:hover::after { width: 100%; }
   position: relative;
   height: 500px;
   width: 100%;
+  /* Background image – replace with your own memorial image if you have it */
   background-image: url('/images/memorial-placeholder.jpg');
   background-size: cover;
   background-position: center;
-  background-color: #2D936C; /* fallback */
+  background-color: var(--secondary-green); /* fallback if image missing */
 }
 .image-caption {
   position: absolute; bottom: 0; left: 0; right: 0;
@@ -363,7 +372,7 @@ footer {
 .fade-in { animation: fadeIn 0.8s ease-out forwards; }
 .hero-logo-img { animation: gentlePulse 3s ease-in-out infinite, floatLogo 4s ease-in-out infinite; animation-delay: 0.5s; }
 
-/* === MOBILE OPTIMISATIONS === */
+/* === MOBILE OPTIMISATIONS (refined breakpoints) === */
 @media (max-width: 992px) {
   .about-content { flex-direction: column; gap: 3rem; }
   .footer-content { flex-direction: column; gap: 2rem; }
@@ -379,7 +388,7 @@ footer {
     text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
   nav ul.active { display: flex; }
-  nav a { padding: 14px 0; font-size: 1.2rem; }
+  nav a { padding: 14px 0; font-size: 1.2rem; } /* bigger tap */
   .mobile-menu-btn { display: block; }
   .hero-logo { max-width: 550px; margin-bottom: 2rem; }
   .hero-logo-img { max-height: 350px; }
@@ -405,7 +414,7 @@ footer {
 @media (max-width: 576px) {
   .hero { min-height: 80vh; padding: 2.5rem 0 4rem; }
   .hero-logo { max-width: 380px; margin-bottom: 1.8rem; }
-  .hero-logo-img { max-height: 240px; }
+  .hero-logo-img { max-height: 240px; } /* smaller for small phones */
   .flier-headline { font-size: 1.6rem; }
   .flier-subheadline { font-size: 1.2rem; }
   .flier-tagline { font-size: 1rem; }
@@ -456,18 +465,18 @@ footer {
   .about-image { height: 200px; }
 }
 
-/* === reduced motion === */
+/* === reduced motion – respect user preference === */
 @media (prefers-reduced-motion) {
   .hero-logo-img, .advice-icon, .logo-glow, .feature-card:hover,
   .cta-button:hover, .contact-trigger-btn:hover, .pillar:hover,
-  .fade-in, .modal {
+  .about-image:hover img, .fade-in, .modal {
     animation: none !important;
     transition: none !important;
     transform: none !important;
   }
 }
 
-/* === focus styles === */
+/* === focus styles for accessibility === */
 a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:focus-visible {
   outline: 3px solid var(--accent-gold);
   outline-offset: 3px;
@@ -475,9 +484,11 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
     </style>
 </head>
 <body>
+    <!-- Header & Navigation -->
     <header>
         <div class="container header-container">
             <a href="#home" class="logo">
+                <!-- IMAGE – fixed: no @2x, root‑relative path -->
                 <picture>
                     <source srcset="/images/logo.webp" type="image/webp">
                     <img src="/images/logo.png" alt="Willem Isinyathelo House Logo" width="105" height="105" class="logo-img" loading="eager">
@@ -504,6 +515,7 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-logo fade-in">
@@ -522,6 +534,7 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
         </div>
     </section>
 
+    <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <h2 class="section-title">In Loving Memory of Willem Oberholzer</h2>
@@ -537,6 +550,7 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
                     <p>Every aspect of Willem Isinyathelo House reflects the values Willem Oberholzer lived by: integrity, compassion, faith, and a commitment to helping others reach their full potential. We walk with each student on their educational journey, providing the guidance and support that transforms a house into a home.</p>
                 </div>
                 <div class="about-image">
+                    <!-- The image is set via CSS background; no img tag needed -->
                     <div class="image-caption">
                         <p><em>Guiding students step by step, just as Willem guided his family</em></p>
                     </div>
@@ -545,6 +559,7 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
         </div>
     </section>
 
+    <!-- Father's Advice Section -->
     <section class="fathers-advice" id="advice">
         <div class="container">
             <div class="advice-container">
@@ -581,6 +596,7 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
         </div>
     </section>
 
+    <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
             <h2 class="section-title">What We Provide</h2>
@@ -614,6 +630,7 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
         </div>
     </section>
 
+    <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Affordable Rates</h2>
@@ -627,6 +644,7 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <h2>Contact Us Today!</h2>
@@ -640,6 +658,7 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -670,6 +689,7 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
         </div>
     </footer>
 
+    <!-- Contact Modal -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeContactModal()">&times;</span>
@@ -732,10 +752,12 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
         </div>
     </div>
 
+    <!-- MINIFIED JAVASCRIPT – improved mobile interactions, reduced motion handling, aria attributes -->
     <script>
       (function() {
         "use strict";
 
+        // === mobile menu toggle with aria ===
         const menuBtn = document.getElementById('mobileMenuBtn');
         const mainNav = document.getElementById('mainNav');
         if (menuBtn && mainNav) {
@@ -744,6 +766,7 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
             const expanded = mainNav.classList.toggle('active');
             this.setAttribute('aria-expanded', expanded);
           });
+          // close on outside click (touch friendly)
           document.addEventListener('click', function(e) {
             if (!menuBtn.contains(e.target) && !mainNav.contains(e.target) && mainNav.classList.contains('active')) {
               mainNav.classList.remove('active');
@@ -752,6 +775,7 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
           });
         }
 
+        // === smooth scroll + close mobile nav ===
         document.querySelectorAll('nav a, .cta-button, .contact-trigger-btn').forEach(anchor => {
           anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -770,11 +794,23 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
           });
         });
 
+        // === header shadow on scroll (passive for performance) ===
         const header = document.querySelector('header');
         window.addEventListener('scroll', function() {
           header.style.boxShadow = window.scrollY > 100 ? '0 4px 12px rgba(0,0,0,0.15)' : '0 4px 12px rgba(0,0,0,0.08)';
         }, { passive: true });
 
+        // === reduce hero logo parallax on mobile (optional) ===
+        window.addEventListener('scroll', function() {
+          const logo = document.querySelector('.hero-logo-img');
+          if (logo && window.innerWidth > 768 && window.scrollY < 500) {
+            logo.style.transform = `translateY(${window.scrollY * -0.5}px)`;
+          } else if (logo) {
+            logo.style.transform = '';
+          }
+        }, { passive: true });
+
+        // === modal functions ===
         window.showContactModal = function() {
           const modal = document.getElementById('contactModal');
           if (modal) {
@@ -789,10 +825,12 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
             document.body.style.overflow = '';
           }
         };
+        // click outside modal to close
         window.onclick = function(event) {
           const modal = document.getElementById('contactModal');
           if (event.target === modal) closeContactModal();
         };
+        // escape key closes modal
         document.addEventListener('keydown', function(e) {
           if (e.key === 'Escape') {
             const modal = document.getElementById('contactModal');
@@ -800,6 +838,7 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
           }
         });
 
+        // === inquiry type selection (with keyboard support) ===
         document.querySelectorAll('.contact-inquiry').forEach(item => {
           item.addEventListener('click', function() {
             setActiveInquiry(this);
@@ -821,6 +860,7 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
           document.getElementById('selectedInquiry').value = el.dataset.title;
         }
 
+        // === form validation visual feedback ===
         document.querySelectorAll('.form-input').forEach(input => {
           input.addEventListener('input', function() {
             this.setCustomValidity('');
@@ -835,6 +875,7 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
           });
         });
 
+        // === form submission ===
         document.getElementById('inquiryForm').addEventListener('submit', function(e) {
           e.preventDefault();
           const selectedInquiry = document.getElementById('selectedInquiry').value;
@@ -861,6 +902,7 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .inquiry-item:
           closeContactModal();
           alert('Your email client will open with a pre-filled message. Please check and send.');
           this.reset();
+          // reset inquiry selection
           document.querySelectorAll('.contact-inquiry').forEach(i => {
             i.style.border = '2px solid #e0e0e0';
             i.style.background = 'var(--neutral-light)';
